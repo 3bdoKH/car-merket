@@ -24,7 +24,7 @@ import '../components/adds.css'
 import '../components/footer/footerFeatureBar.css';
 
 function MyApp({ Component, pageProps }: any) {
-  const router = useRouter();
+  const router = useRouter(); 
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.body.dir = router.locale === 'ar' ? 'rtl' : 'ltr';
