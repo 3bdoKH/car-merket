@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home-container {
@@ -8,22 +9,20 @@ html {
 }
 
 .main-title {
-  font-size: 2.7rem;
-  font-weight: 900;
+  font-size: 2.2rem;
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(90deg, #ff8c00, #38b2ac, #0070f3, #ff8c00);
-  background-size: 200% 200%;
-  animation: main-gradient-move 5s ease-in-out infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 12px #ffddb3, 0 1px 4px #38b2ac;
-  letter-spacing: 2px;
+  margin-bottom: 2.2rem;
+  color: #23272f;
+  letter-spacing: 1px;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  text-shadow: none;
   font-family: 'Segoe UI', Arial, sans-serif;
-  position: relative;
-  display: inline-block;
-  padding: 0.15em 1em 0.2em 1em;
-  border-radius: 10px;
+  border-radius: 0;
+  padding: 0.1em 0;
+  display: block;
 }
 
 @keyframes main-gradient-move {
@@ -65,21 +64,20 @@ html {
 }
 
 .category-title {
-  font-size: 1.7rem;
-  font-weight: 800;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-transform: capitalize;
-  background: linear-gradient(90deg, #38b2ac, #0070f3, #ff8c00, #38b2ac);
-  background-size: 200% 200%;
-  animation: category-gradient-move 6s ease-in-out infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 8px #b3d1ff, 0 1px 2px #38b2ac;
-  letter-spacing: 1.5px;
+  color: #0070f3;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  text-shadow: none;
+  letter-spacing: 0.5px;
   font-family: 'Segoe UI', Arial, sans-serif;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.2em;
   margin-top: 0;
+  border-radius: 0;
+  display: block;
 }
 
 @keyframes category-gradient-move {

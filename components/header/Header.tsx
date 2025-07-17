@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import type { ServiceCategory } from '../../types/service';
 import { useState, useEffect } from 'react';
-
+import logo from '../../public/car-market-high-resolution-logo-transparent.png'
+import Image from 'next/image';
 interface HeaderProps {
   onSearch: (term: string, category?: ServiceCategory, city?: string) => void;
   search : Boolean;
@@ -30,15 +31,26 @@ export default function Header({ onSearch, search, showCity = false }: HeaderPro
 
   return (
     <header className="site-header">
-      <div className="site-title">{t('title')}</div>
-      <button
-        className="menu-toggle"
-        aria-label="Toggle navigation menu"
-        onClick={() => setMenuOpen((open) => !open)}
-        style={locale === 'en' ? {right:'0'} : {left:'0'}}
-      >
-        <span className="menu-icon">&#9776;</span>
-      </button>
+      <div className='inner-header'>
+        <div className="site-title"><Image src={logo} alt="logo" /></div>
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation menu"
+          onClick={() => setMenuOpen((open) => !open)}
+          style={locale === 'en' ? {right:'0'} : {left:'0'}}
+        >
+          <span className="menu-icon">&#9776;</span>
+        </button>
+        
+        <div className="header-search">
+          {
+            search && <SearchBar onSearch={onSearch} showCity={showCity} />
+          }
+        </div>
+        <button className="language-switch-btn" onClick={switchLanguage}>
+          {t('switch_language')}
+        </button>
+      </div>
       <nav className={`site-nav${menuOpen ? ' open' : ''}`}>
         <ul className="nav-list">
           <li className="nav-item">
@@ -52,14 +64,6 @@ export default function Header({ onSearch, search, showCity = false }: HeaderPro
           </li>
         </ul>
       </nav>
-      <div className="header-search">
-        {
-          search && <SearchBar onSearch={onSearch} showCity={showCity} />
-        }
-      </div>
-      <button className="language-switch-btn" onClick={switchLanguage}>
-        {t('switch_language')}
-      </button>
     </header>
   );
 }

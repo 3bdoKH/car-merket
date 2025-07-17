@@ -1,26 +1,56 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import { FiMail } from 'react-icons/fi';
+import { FiTruck, FiRefreshCw, FiShield } from 'react-icons/fi';
 
 const categories = [
-  { key: 'repair', link: '/category/repair' },
-  { key: 'carwash', link: '/category/carwash' },
-  { key: 'spray', link: '/category/spray' },
-  { key: 'spare-parts', link: '/category/spare parts' },
-  { key: 'tires', link: '/category/tires' },
-  { key: 'accessorize', link: '/category/accessorize' },
-  { key: 'showroom', link: '/category/showroom' },
-  { key: 'maintenance', link: '/category/maintenance' },
-  { key: 'oil-change', link: '/category/oil-change' },
-  { key: 'battery', link: '/category/battery' },
-  { key: 'air-conditioning', link: '/category/air-conditioning' },
-  { key: 'diagnostics', link: '/category/diagnostics' },
-  { key: 'car-polish', link: '/category/car-polish' },
-  { key: 'detailing', link: '/category/detailing' },
-  { key: 'insurance', link: '/category/insurance' },
-  { key: 'roadside-assistance', link: '/category/roadside-assistance' },
-  { key: 'car-rental', link: '/category/car-rental' },
+    { key: 'repair', link: '/category/repair' },
+    { key: 'carwash', link: '/category/carwash' },
+    { key: 'spray', link: '/category/spray' },
+    { key: 'spare-parts', link: '/category/spare parts' },
+    { key: 'tires', link: '/category/tires' },
+    { key: 'accessorize', link: '/category/accessorize' },
+    { key: 'showroom', link: '/category/showroom' },
+    { key: 'maintenance', link: '/category/maintenance' },
+    { key: 'oil-change', link: '/category/oil-change' },
+    { key: 'battery', link: '/category/battery' },
+    { key: 'air-conditioning', link: '/category/air-conditioning' },
+    { key: 'diagnostics', link: '/category/diagnostics' },
+    { key: 'car-polish', link: '/category/car-polish' },
+    { key: 'detailing', link: '/category/detailing' },
+    { key: 'insurance', link: '/category/insurance' },
+    { key: 'roadside-assistance', link: '/category/roadside-assistance' },
+    { key: 'car-rental', link: '/category/car-rental' },
 ];
+
+const FeatureBar = () => {
+    const { t } = useTranslation();
+    return (
+        <div className="footer-feature-bar">
+        <div className="footer-feature-item">
+            <div className="footer-feature-icon"><FiTruck /></div>
+            <div>
+            <div className="footer-feature-title">شحن سريع</div>
+            <div className="footer-feature-desc"> لأي مكان في مصر</div>
+            </div>
+        </div>
+        <div className="footer-feature-item">
+            <div className="footer-feature-icon"><FiRefreshCw /></div>
+            <div>
+            <div className="footer-feature-title">عايز ترجع منتج؟</div>
+            <div className="footer-feature-desc"> دي أسهل حاجة عندنا</div>
+            </div>
+        </div>
+        <div className="footer-feature-item">
+            <div className="footer-feature-icon"><FiShield /></div>
+            <div>
+            <div className="footer-feature-title">خدمة عملاء متخصصة</div>
+            <div className="footer-feature-desc"> خدمة عملاء متخصصة</div>
+            </div>
+        </div>
+        </div>
+    );
+};
 
 const Footer: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -30,6 +60,8 @@ const Footer: React.FC = () => {
         i18n.changeLanguage(nextLocale);
     };
     return (
+        <>
+        <FeatureBar />
         <footer className="footer">
         <div className="footer__top">
             <div className="footer__col-group">
@@ -93,19 +125,19 @@ const Footer: React.FC = () => {
         {/* Bricks-style tags section below */}
         <div className="footer__tags-bricks" dir={isArabic ? 'rtl' : 'ltr'}>
             {categories.map((cat) => (
-                <a
+                <span
                     key={cat.key}
-                    href={cat.link}
                     className="footer__tag-brick"
                 >
                     {t(cat.key)}
-                </a>
+                </span>
             ))}
         </div>
         <div className="footer__bottom">
             <span>© {new Date().getFullYear()} <a href="https://emereld-marketing.online" style={{textDecoration:'none', color:'#38bdf8'}}>EMERELD</a>. All rights reserved.</span>
         </div>
         </footer>
+        </>
     );
 };
 

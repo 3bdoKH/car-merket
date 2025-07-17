@@ -10,6 +10,9 @@ import { useTranslation } from 'react-i18next';
 import Footer from '@/components/footer/Footer';
 import Head from 'next/head';
 import BrandSlider from '../components/BrandSlider';
+import BestCategories from '@/components/BestCategories';
+import CarServicesArea from '@/components/CarServicesArea';
+import Adds from '@/components/Adds';
 
 export default function Home() {
     const [servicesByCategory, setServicesByCategory] = useState<Record<ServiceCategory, Service[]>>({} as any);
@@ -22,12 +25,32 @@ export default function Home() {
     const metaTitle = isArabic ? 'كار ماركت - أفضل حلول العناية بالسيارات' : 'Car Market - Best Car Care Solutions';
     const metaDescription = isArabic ? 'اكتشف أفضل خدمات وصيانة السيارات بالقرب منك.' : 'Find the best car services, maintenance, and care solutions near you.';
     const metaOgImage = '/public/file.svg';
-    const metaUrl = 'https://yourdomain.com/';
+    const metaUrl = 'https://carmarket-eg.online/';
     const handleSearch = (term: string, category?: ServiceCategory, city?: string) => {
         setSearchTerm(term);
         setSearchCategory(category);
         setSearchCity(city);
     };
+    const heroImages = [
+        "/images/car-1.png",
+        "/images/car-2.png",
+        "/images/car-3.png",
+        "/images/car-4.png",
+        "/images/car-5.webp"
+    ];
+    const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+    const [fade, setFade] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false); 
+            setTimeout(() => {
+            setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+            setFade(true); 
+            }, 500); 
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
 
     const filteredServicesByCategory = useMemo(() => {
         const result: Record<string, Service[]> = {};
@@ -134,10 +157,18 @@ export default function Home() {
                 </div>
                 <div className="hero-image-wrapper">
                     <div className="hero-image-bg"></div>
-                    <img src="/images/hero.webp" alt="Hero Car" className="hero-image" />
+                    <img
+                        src={heroImages[currentHeroIndex]}
+                        alt="Hero Car"
+                        className={`hero-image ${fade ? "fade-in" : "fade-out"}`}
+                        key={heroImages[currentHeroIndex]} 
+                    />
                 </div>
             </section>
+            <BestCategories />
             <BrandSlider />
+            <CarServicesArea />
+            <Adds />
         <h1 className="main-title">{t('main-title')}</h1>
         
         {Object.entries(filteredServicesByCategory).length === 0 ? (

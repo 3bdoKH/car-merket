@@ -12,7 +12,7 @@
     "spare-parts" : "قطع غيار",
     "tires" : "اطارات",
     "accessorize" : "اكسسوارات",
-    "showroom" : "معارض",
+    "showroom" : "معارض السيارات",
     "services" : "الخدمات : ",
     "search" : "ابحث",
     "all-categories" : "جميع الخدمات",
@@ -39,5 +39,14 @@
     "insurance": "تأمين السيارات",
     "roadside-assistance": "مساعدة على الطريق",
     "car-rental": "تأجير السيارات",
-    "quick_links" : "روابط سريعه"
+    "quick_links" : "روابط سريعه",
+    "best-categories-heading" : "تسوق افضل الأقسام",
+    "best-categories-p" : "بناء علي اختيارات المستخدمين",
+    "car-services-area-title" : "مراكز الصيانة في محافظتك",
+    "car-services-area-p" : "مراكز الصيانة في محافظتك",
+    "fast-shpping" : "شحن سريع",
+    "to-any-place" : "لاي مكان في مصر",
+    "return" : "عايز ترجع منتج؟", 
+    "easy" : "دي أسهل حاجة عندنا",
+    "customer-service" : "خدمة عملاء متخصصة"
 }

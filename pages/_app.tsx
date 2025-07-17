@@ -17,6 +17,11 @@ import '../pages/category/category.css';
 import '../pages/contact/contact.css';
 import '../pages/index.css';
 import '../pages/service/serviceDetails.css';
+import '../components/BestCategory.css'
+import '../pages/city/city.css'
+import '../components/carServicesArea.css'; 
+import '../components/adds.css'
+import '../components/footer/footerFeatureBar.css';
 
 function MyApp({ Component, pageProps }: any) {
   const router = useRouter();
