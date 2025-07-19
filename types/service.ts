@@ -5,11 +5,12 @@ export interface Service {
     name: string;
     address: string;
     city: string;
-    contact: string;
+    contact: string[];
     description : string;
     category: ServiceCategory;
     servicesOffered: string[];
     images?: string[];
     logo?: string; 
     location: string;
+    social : string[];
 }
