@@ -23,6 +23,8 @@ const settings = {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: '0',
     responsive: [
