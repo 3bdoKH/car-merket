@@ -13,6 +13,7 @@ import BrandSlider from '../components/BrandSlider';
 import BestCategories from '@/components/BestCategories';
 import CarServicesArea from '@/components/CarServicesArea';
 import Adds from '@/components/Adds';
+import SponsorSlider from '../components/SponsorSlider';
 
 export default function Home() {
     const [servicesByCategory, setServicesByCategory] = useState<Record<ServiceCategory, Service[]>>({} as any);
@@ -175,10 +176,18 @@ export default function Home() {
                     />
                 </div>
             </section>
+
+            
+            <div style={{ textAlign: 'center', margin: '5rem 0 1rem 0', fontWeight: 'bold', fontSize: '1.3rem', color: '#0070f3' }}>
+                {t('sponsor-slider-phrase')}
+            </div>
+            <SponsorSlider />
+
             <BestCategories />
             <BrandSlider />
             <CarServicesArea />
             <Adds />
+
         <h1 className="main-title">{t('main-title')}</h1>
         
         {Object.entries(filteredServicesByCategory).length === 0 ? (
