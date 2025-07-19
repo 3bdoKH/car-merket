@@ -25,6 +25,9 @@ import '../components/footer/footerFeatureBar.css';
 import './blog.css'
 import '../pages/blog/led.css'
 import '../pages/services.css'
+import '../components/sponsorSlider.css';
+
+
 function MyApp({ Component, pageProps }: any) {
   const router = useRouter(); 
   useEffect(() => {
