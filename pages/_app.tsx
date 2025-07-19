@@ -22,7 +22,9 @@ import '../pages/city/city.css'
 import '../components/carServicesArea.css'; 
 import '../components/adds.css'
 import '../components/footer/footerFeatureBar.css';
-
+import './blog.css'
+import '../pages/blog/led.css'
+import '../pages/services.css'
 function MyApp({ Component, pageProps }: any) {
   const router = useRouter(); 
   useEffect(() => {

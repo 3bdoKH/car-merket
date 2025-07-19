@@ -4,9 +4,10 @@
   justify-content: space-between;
   flex-direction: column;
   padding: 1.2rem 2rem;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(90deg, #2c5364 0%,#0f2027  100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(44,83,100,0.10);
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -29,7 +30,7 @@
 .site-title {
   font-size: 1.7rem;
   font-weight: 800;
-  color: #0070f3;
+  color: #fff;
   letter-spacing: 1px;
   margin-right: 8px;
 }
@@ -94,8 +95,8 @@
 @media (width > 700px) {
   .nav-link {
     text-decoration: none;
-    color: black;
-    background: white;
+    color: #fff;
+    background: transparent;
   }
 }
 
@@ -121,7 +122,7 @@
   display: none;
   position: absolute;
   top: 7px;
-  color: #0070f3;
+  color: #fff;
   z-index: 30;
   padding: 0.2rem 0.7rem;
   border-radius: 8px;

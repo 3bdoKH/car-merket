@@ -36,10 +36,15 @@ export default function Home() {
         "/images/car-2.png",
         "/images/car-3.png",
         "/images/car-4.png",
-        "/images/car-5.webp"
+        "/images/car-5.webp",
+        "/images/car-6.png",
+        "/images/car-7.png",
+        "/images/car-8.png",
+        "/images/car-9.png",
     ];
     const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
     const [fade, setFade] = useState(true);
+    const [randomServicesByCategory, setRandomServicesByCategory] = useState<Record<string, Service[]>>({});
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -80,6 +85,11 @@ export default function Home() {
             }, {} as Record<ServiceCategory, Service[]>);
             
             setServicesByCategory(grouped);
+            const randoms: Record<string, Service[]> = {};
+            Object.entries(grouped).forEach(([cat, services]) => {
+                randoms[cat] = getRandomItems(services, 4);
+            });
+            setRandomServicesByCategory(randoms);
         } catch (error) {
             console.error('Error fetching services:', error);
         } finally {
@@ -194,7 +204,7 @@ export default function Home() {
                     </div>
                     
                     <div className="services-grid">
-                        {getRandomItems(services, 4).map((service) => (
+                        {(randomServicesByCategory[category] || []).map((service) => (
                             <ServiceCard key={service._id} service={service} />
                         ))}
                     </div>

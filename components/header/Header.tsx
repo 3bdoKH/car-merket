@@ -62,6 +62,12 @@ export default function Header({ onSearch, search, showCity = false }: HeaderPro
           <li className="nav-item">
             <a href="/contact/contact" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_contact')}</a>
           </li>
+          <li className="nav-item">
+            <a href="/blog" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_blog')}</a>
+          </li>
+          <li className="nav-item">
+            <a href="/services" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_services')}</a>
+          </li>
         </ul>
       </nav>
     </header>

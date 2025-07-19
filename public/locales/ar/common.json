@@ -35,7 +35,7 @@
     "air-conditioning": "تكييف الهواء",
     "diagnostics": "تشخيص الأعطال",
     "car-polish": "تلميع السيارات",
-    "detailing": "تنظيف وتفصيل السيارات",
+    "detailing": "تنظيف السيارات",
     "insurance": "تأمين السيارات",
     "roadside-assistance": "مساعدة على الطريق",
     "car-rental": "تأجير السيارات",
@@ -48,5 +48,9 @@
     "to-any-place" : "لاي مكان في مصر",
     "return" : "عايز ترجع منتج؟", 
     "easy" : "دي أسهل حاجة عندنا",
-    "customer-service" : "خدمة عملاء متخصصة"
+    "customer-service" : "خدمة عملاء متخصصة",
+    "nav_blog" : "الأخبار",
+    "nav_services" : "مراكز الصيانة",
+    "all-services" : "أفضل مراكز صيانة سيارات في مصر"
+
 }
