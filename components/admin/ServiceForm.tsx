@@ -213,16 +213,29 @@ export default function ServiceForm({ initialData, onSubmit, onCancel }: Service
         <div className="form-group">
             <label className="form-label">Image URLs</label>
             <div className="form-inline">
-            <input
-                type="text"
+            <textarea
                 value={currentImage || ''}
                 onChange={(e) => setCurrentImage(e.target.value)}
                 className="form-input form-input-inline"
-                placeholder="Add an image URL"
+                placeholder="Paste one or more image URLs, separated by spaces or newlines"
+                rows={3}
             />
             <button
                 type="button"
-                onClick={handleAddImage}
+                onClick={() => {
+                    // Split by whitespace (spaces, newlines, tabs), remove empty, remove leading @ if present
+                    const urls = (currentImage || '')
+                        .split(/\s+/)
+                        .map(url => url.replace(/^@/, '').trim())
+                        .filter(Boolean);
+                    if (urls.length > 0) {
+                        setFormData(prev => ({
+                            ...prev,
+                            images: [...(prev.images || []), ...urls]
+                        }));
+                        setCurrentImage('');
+                    }
+                }}
                 className="form-btn"
             >
                 Add
