@@ -6,19 +6,19 @@ import { useTranslation } from 'react-i18next';
 const cities = [
     {
         name: 'القاهرة',
-        slug: 'cairo',
+        slug: 'القاهرة',
         count: 213,
         areas: ['Elmanial', 'المنيل', 'مدينة الشروق', 'مدينة السلام', 'الرحاب', 'المقطم'],
     },
     {
         name: 'الجيزة',
-        slug: 'giza',
+        slug: 'الجيزة',
         count: 83,
         areas: ['الدقي', 'العياط', 'المهندسين', 'الهرم', '6 أكتوبر'],
     },
     {
         name: 'الاسكندرية',
-        slug: 'alexandria',
+        slug: 'الاسكندرية',
         count: 36,
         areas: ['العامرية', 'الطريق الدائري', 'برج العرب', 'EIRAML Station', 'المندرة'],
     },
