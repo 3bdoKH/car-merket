@@ -5,15 +5,36 @@ import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 
 const brandImages = [
-  'byd.jpeg',
-  'honda.jpeg',
-  'hyundai.jpeg',
-  'kia.jpeg',
-  'mazda.jpeg',
-  'mg.jpeg',
-  'mitsubishi.jpeg',
+  'FIAT.jpeg',
+  'peugeot.jpeg',
+  'subaru.jpeg',
+  'minicooper.jpeg',
+  'alpha.jpeg',
+  'ford.jpeg',
+  'seat.jpeg',
+  'Suzuki.jpeg',
+  'ds.jpeg',
+  'cetroen.jpeg',
+  'volkswagen.jpeg',
+  'Nissan.jpeg',
+  'chevrolet.jpeg',
+  'Opel.jpeg',
+  'skoda.jpeg',
+  'Jeep.jpeg',
+  'Jetour.jpeg',
+  'audi.jpeg',
+  'bmw.jpeg',
+  'mercedes.jpeg',
+  'Changan.jpeg',
   'renault.jpeg',
+  'mitsubishi.jpeg',
+  'mg.jpeg',
+  'mazda.jpeg',
+  'hyundai.jpeg',
+  'honda.jpeg',
   'Toyota.jpeg',
+  'byd.jpeg',
+  'kia.jpeg'
 ];
 
 const sliderSettings = {
